@@ -1,0 +1,64 @@
+# ==========================================
+# SmartDrive - .gitignore
+# ==========================================
+
+# Environment variables & local secrets
+.env
+.env.*
+!.env.example
+config.local.php
+
+# User uploads and runtime files (preserve directory via .gitkeep)
+/students/*
+!/students/.gitkeep
+/admin/documents/*
+!/admin/documents/.gitkeep
+/admin/pdf/*
+!/admin/pdf/.gitkeep
+/pdf/*
+!/pdf/.gitkeep
+
+# Exclude standalone document/binary uploads from being pushed
+*.pdf
+*.zip
+*.tar.gz
+*.rar
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+error_log
+.phpunit.result.cache
+
+# Editor & IDE configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Testing, documentation & package managers (if introduced)
+/tests/
+/test/
+/docs/
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
+
